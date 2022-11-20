@@ -16,4 +16,4 @@ And then docker will build project image with downloading all of dependencies fr
 
 Don't forget to setup environment variables like on this image:
 
-! [.env](https://st3.depositphotos.com/27847728/34610/v/600/depositphotos_346108142-stock-illustration-abstract-letter-logo-design-vector.jpg)
+![.env](C:/Users/bahch/OneDrive/Pictures/Screenshots/2022-11-20.jpg)
