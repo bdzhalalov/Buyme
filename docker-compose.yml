@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: buyme
+    build: .
+    command: sh -c "python Buyme/manage.py migrate && python Buyme/manage.py runserver 0.0.0.0:8000"
+
+    depends_on:
+      - db
+
+    volumes:
+      - ./:/var/www/app
+
+    ports:
+      - "8000:8000"
+
+  db:
+    container_name: buyme_db
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
