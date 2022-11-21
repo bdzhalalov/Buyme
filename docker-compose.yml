@@ -4,7 +4,7 @@ services:
   app:
     container_name: buyme
     build: .
-    command: sh -c "python Buyme/manage.py migrate && python Buyme/manage.py runserver 0.0.0.0:8000"
+    command: sh -c "python Buyme/manage.py migrate && python Buyme/manage.py runserver 0.0.0.0:8080"
 
     depends_on:
       - db
