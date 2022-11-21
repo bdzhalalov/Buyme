@@ -41,7 +41,6 @@ class ItemListView(APIView):
 
     def get_object(self, id):
         try:
-            print(Item.objects.get(pk=id))
             return Item.objects.get(pk=id)
         except:
             raise Http404
@@ -67,7 +66,7 @@ class PaymentIntentView(APIView):
             item_id = self.kwargs['id']
             item = Item.objects.get(pk=item_id)
             if item.currency == 'usd':
-                amount = item.get_price()
+                amount = item.price
             else:
                 amount = item.get_price() * 100
             # Create a PaymentIntent with the order amount and currency
