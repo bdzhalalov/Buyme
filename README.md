@@ -4,7 +4,7 @@ Buyme is a service for selling products with Stripe API integration for making a
 
 ## Start with Buyme
 
-For quick service work test follow this [link]()
+For quick service work test follow this [link](http://159.223.238.48:8080/)
 
 ### Installation 
 
